@@ -25,16 +25,16 @@ void PreOrder_Non_recursive(BT_Node<T> *p)  //非递归
 	stack<BT_Node<T>* > S;
 	if(!p)
 	return; // 空树
-	S.push(NULL); 
-	while(p)
+	S.push(p); 
+	while(!S.empty())
 	{
 		cout << p->data << " ";
-		if(p->rchild);
+		if(p->rchild)
 		S.push(p->rchild);
 		if(p->lchild)
 		p=p->lchild;
 		else
-		S.pop(p);
+		S.pop();
 	} 
 	
 } 
