@@ -64,7 +64,8 @@ void InOrder_Non_recursive(BT_Node<T> *p)  //非递归
 		}
 		if(!S.empty())
 		{
-			cout << S.top()->data;
+			p=S.top(); // 更新p			
+			cout << S.top()->data << " ";
 			S.pop();
 			p=p->rchild;
 		}
@@ -83,7 +84,7 @@ void PostOrder(BT_Node<T> bt) //递归
 }
 
 template<class T>
-void InOrder_Non_recursive(BT_Node<T> *p)  //非递归 
+void PostOrder_Non_recursive(BT_Node<T> *p)  //非递归 
 {
 	stack<BT_Node<T>* > S;
 	if(!p)
