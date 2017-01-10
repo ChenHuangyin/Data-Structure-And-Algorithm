@@ -22,9 +22,8 @@ int main()
 			for(int i=0;i<N;i++)
 				for(int j=0;j<N;j++)
 					if(map[i][k]==1 && map[k][j]==1)
-					map[i][j]=1;
-					
-		if(map[0][N-1])
+					map[i][j]=1;  //将节点连通                               					
+		if(map[0][N-1])//直接判断                      		
 		cout << "I can post the letter" << endl;
 		else
 		cout << "I can't post the letter" << endl;
